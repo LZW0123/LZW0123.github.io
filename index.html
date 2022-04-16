@@ -169,99 +169,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://lzw0123.github.io/2022/04/16/PPO%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ZhengWei Li">
-      <meta itemprop="description" content="怕什么真理无穷，进一寸有一寸的欢喜！！！">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZWLi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/16/PPO%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-04-16 11:26:41" itemprop="dateCreated datePublished" datetime="2022-04-16T11:26:41+08:00">2022-04-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-18 14:45:16" itemprop="dateModified" datetime="2021-12-18T14:45:16+08:00">2021-12-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ol>
-<li>轨迹$\tau$的定义：在一个episode下，从开始时刻到终止时刻，由特定状态s出发，所获得的一系列状态和动作对<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218111942.png"></li>
-<li>可以从上图中写出轨迹的分布概率：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218112117.png"></li>
-</ul>
-</li>
-<li>一个策略的回报与期望奖励<ul>
-<li>一个策略的回报，指的是使用某一策略后，可以得到一条轨迹，然后将该轨迹的每一时刻的奖励相加，可得到一个策略的回报</li>
-<li>期望奖励，指的是存在多条轨迹，每一条轨迹都有相应的概率，也就是求轨迹奖励的期望</li>
-<li>示意图：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218112749.png"></li>
-</ul>
-</li>
-<li>策略梯度方法：调整actor的策略$\pi$，使得期望奖励最大化，轨迹$\tau$是参数化的，导致了策略成了参数化(我理解的策略是在当前状态下，选择何种动作)，接下来对奖励求导即可：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218113746.png"></li>
-<li>策略梯度算法的模型如下：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218113829.png"><ul>
-<li>对回报函数修改一下，变为演员-评论家模型：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218114238.png"></li>
-</ul>
-</li>
-</ol>
-<h1 id="PPO算法"><a href="#PPO算法" class="headerlink" title="PPO算法"></a>PPO算法</h1><ol>
-<li>因PPO算法整体是on-policy，为了提高对数据的利用效率，采用重采样的形式，将on-policy转为局部的off-policy，重采样也就是如果p的分布不好计算的时候，那么我们就用q分布来近似一个p分布。</li>
-<li>重要采用公式示意图：<br> <img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218115608.png"></li>
-<li>公式推导：<br> <img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218120058.png"></li>
-<li>再次重新推导<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218120214.png"></li>
-<li>求解的过程可以转化为：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218120342.png"><ul>
-<li>对奖励进行求导是关于$\theta$进行求导</li>
-</ul>
-</li>
-<li>PPO是直接使用KL散度进行限制，而PPO2是不讲KL散度直接放入优化函数，而是进行裁剪，限制它<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20211218144514.png"></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://lzw0123.github.io/2022/04/15/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -385,7 +292,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
