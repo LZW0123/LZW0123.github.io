@@ -170,6 +170,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lzw0123.github.io/2022/04/16/AC%E3%80%81A2C%E3%80%81A3C%E7%AE%97%E6%B3%95%E7%AE%80%E6%98%93%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ZhengWei Li">
+      <meta itemprop="description" content="怕什么真理无穷，进一寸有一寸的欢喜！！！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZWLi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/16/AC%E3%80%81A2C%E3%80%81A3C%E7%AE%97%E6%B3%95%E7%AE%80%E6%98%93%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">AC、A2C、A3C算法简易区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-04-16 23:48:46 / Modified: 23:51:11" itemprop="dateCreated datePublished" datetime="2022-04-16T23:48:46+08:00">2022-04-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62100741">参考原文</a> # AC算法</li>
+</ul>
+<ol type="1">
+<li>策略梯度如下式：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20220406095858.png" />
+<ul>
+<li>其中, <span class="math inline">\(\pi_{\theta}(a \mid s)\)</span> 为Actor， <span class="math inline">\(\Psi_{t}\)</span> 称为Critic，此式是一个广义的AC框架。</li>
+</ul></li>
+<li><span class="math inline">\(\Psi_{t}\)</span> 可以取以下几种：
+<ul>
+<li>轨迹总回报，<span class="math inline">\(\Sigma_{t=0}^{\infty} r_{t}\)</span></li>
+<li>执行动作后的回报，<span class="math inline">\(\Sigma_{t^{\prime}=t}^{\infty} \boldsymbol{r}_{t^{\prime}}\)</span></li>
+<li>加入基线的形式，<span class="math inline">\(\sum_{t^{\prime}=t}^{\infty} r_{t^{\prime}}-b\left(s_{t}\right)\)</span></li>
+<li>状态-行为值函数，<span class="math inline">\(Q^{\pi}\left(s_{t}, a_{t}\right)\)</span></li>
+<li>优势函数，<span class="math inline">\(A^{\pi}\left(s_{t}, a_{t}\right)\)</span></li>
+<li>TD-error，<span class="math inline">\(r_{t}+V^{\pi}\left(s_{t+1}\right)-V^{\pi}\left(s_{t}\right)\)</span></li>
+</ul></li>
+<li>前三个critic直接利用轨迹的累积回报，由此计算出来的策略不存在偏差，但是由于是多步的累积回报，因此方差很大</li>
+<li>后三个利用动作值函数，优势函数和TD偏差来代替累积回报，因而方差下，但是由于这三种方法都用到了逼近，因此计算出来的策略梯度存在偏差。当critic取后三个时，为经典的AC算法。</li>
+<li><img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20220406203012.png" /></li>
+</ol>
+<h1 id="a2c算法">A2C算法</h1>
+<ol type="1">
+<li>A2C使用优势函数代替Critic网络中的原始回报，可以作为衡量选取动作值和所有动作平均值好坏的指标。</li>
+<li>优势函数：<img src="https://cdn.jsdelivr.net/gh/LZW0123/PictureBed/img/20220406203607.png" /></li>
+<li>意义：如果优势函数大于0，则说明该动作比平均动作好，如果优势函数小于0，则说明当前动作还不如平均动作好
+<ul>
+<li>理解：如果优势函数大于0 ，那么Q&gt;V，V在里面可以表示一个平均动作下的价值</li>
+</ul></li>
+</ol>
+<h1 id="a3c算法">A3C算法</h1>
+<ol type="1">
+<li>异步优势动作评价算法，存在多个并行环境来收集数据，打破数据之间的关联性。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://lzw0123.github.io/2022/04/15/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -293,9 +385,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -424,6 +522,8 @@
 
 
 
+
+  
 
   
 
