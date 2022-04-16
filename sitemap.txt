@@ -1,6 +1,6 @@
-https://lzw0123.github.io/about/index.html
-https://lzw0123.github.io/archives/index.html
-https://lzw0123.github.io/categories/index.html
-https://lzw0123.github.io/tags/index.html
-https://lzw0123.github.io/2022/04/15/test/
-https://lzw0123.github.io/
+http://example.com/about/index.html
+http://example.com/archives/index.html
+http://example.com/categories/index.html
+http://example.com/tags/index.html
+http://example.com/2022/04/15/test/
+http://example.com/
