@@ -1641,30 +1641,38 @@ pre code {
   z-index: 50;
 }
 .back-to-top {
-  background: #222;
+  font-size: 12px;
   bottom: -100px;
   box-sizing: border-box;
+  left: 30px;
   color: #fff;
-  cursor: pointer;
-  left: $b2t-position-left;
-  opacity: 0.8;
   padding: 0 6px;
+  transition: bottom 0.2s ease-in-out;
+  background: #222;
+  cursor: pointer;
+  opacity: 0.8;
   position: fixed;
-  transition-property: bottom;
   z-index: 30;
-  width: initial;
+  left: 30px;
+}
+@media (max-width: 991px) {
+  .back-to-top {
+    left: 20px;
+  }
+}
+.back-to-top:hover {
+  opacity: 1;
+}
+@media (max-width: 991px) {
+  .back-to-top {
+    opacity: 1;
+  }
 }
 .back-to-top:hover {
   color: #87daff;
 }
 .back-to-top.back-to-top-on {
   bottom: 19px;
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    left: 20px;
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 900px) {
   .back-to-top {
@@ -2577,7 +2585,7 @@ mjx-container[display='true'] + br {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #2fffe5;
+  background: #ffbbe3;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
