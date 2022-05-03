@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test</title>
+    <url>/2022/04/15/test/</url>
+    <content><![CDATA[<p>这是我的第一个博客！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>AC、A2C、A3C算法简易区别</title>
     <url>/2022/04/16/AC%E3%80%81A2C%E3%80%81A3C%E7%AE%97%E6%B3%95%E7%AE%80%E6%98%93%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<ul>
@@ -41,11 +47,5 @@
       <tags>
         <tag>RL</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2022/04/15/test/</url>
-    <content><![CDATA[<p>这是我的第一个博客！</p>
-]]></content>
   </entry>
 </search>
