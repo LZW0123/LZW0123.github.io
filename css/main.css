@@ -1673,6 +1673,25 @@ pre code {
 .back-to-top.back-to-top-on {
   bottom: 19px;
 }
+@media screen and (min-width: 900px) {
+  .back-to-top {
+    right: 60px;
+    width: 70px;
+    height: 900px;
+    top: -900px;
+    bottom: unset;
+    transition: all 0.5s ease-in-out;
+    background: url("/images/scroll.png");
+    position: fixed;
+  }
+  .back-to-top > i {
+    display: none;
+  }
+  .back-to-top.back-to-top-on {
+    bottom: unset;
+    top: calc(100vh - 900px - 200px);
+  }
+}
 .rtl.post-body p,
 .rtl.post-body a,
 .rtl.post-body h1,
@@ -2565,7 +2584,7 @@ mjx-container[display='true'] + br {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #65eb0e;
+  background: #bba314;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
