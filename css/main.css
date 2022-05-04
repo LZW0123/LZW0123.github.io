@@ -1644,7 +1644,7 @@ pre code {
   font-size: 12px;
   bottom: -100px;
   box-sizing: border-box;
-  left: $b2t-position-left;
+  right: $b2t-position-left;
   color: #fff;
   padding: 0 6px;
   transition: bottom 0.2s ease-in-out;
@@ -2585,7 +2585,7 @@ mjx-container[display='true'] + br {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #af28ee;
+  background: #06ffff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
