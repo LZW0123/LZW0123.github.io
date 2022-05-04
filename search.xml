@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>RL机器人控制面临的问题</title>
-    <url>/2022/05/04/RL%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8E%A7%E5%88%B6%E9%9D%A2%E4%B8%B4%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<ol type="1">
-<li>RL机器人问题，是连续高维动作和状态空间</li>
-<li>RL机器人控制三个方面问题：
-<ul>
-<li>数据效率</li>
-<li>探索与利用</li>
-<li>泛化性和可复现性</li>
-</ul></li>
-<li>数据效率低
-<ul>
-<li>提高数据效率的方法之一是收集更多的数据和更有效地使用目前拥有的数据</li>
-<li>收集更多数据的方法之一是并行地运行多个机器人来收集数据</li>
-</ul></li>
-<li>探索与利用
-<ul>
-<li>真实机器人进行探索，可能会损伤机器人</li>
-<li>同策略方法中探索性取决于初始的条件和训练过程。在训练策略的过程，可能会注重于利用</li>
-</ul></li>
-<li>泛化性和可复现性
-<ul>
-<li>当前的某些算法只注重于某一种任务，而到了另一种任务的时候需要重新调节参数</li>
-<li>随机种子数影响着能否复现成功</li>
-</ul></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>RL</tag>
-        <tag>机器人控制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2022/04/15/test/</url>
-    <content><![CDATA[<p>这是我的第一个博客！</p>
-]]></content>
-  </entry>
-  <entry>
     <title>AC、A2C、A3C算法简易区别</title>
     <url>/2022/04/16/AC%E3%80%81A2C%E3%80%81A3C%E7%AE%97%E6%B3%95%E7%AE%80%E6%98%93%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<ul>
@@ -79,6 +40,45 @@
 ]]></content>
       <tags>
         <tag>RL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2022/04/15/test/</url>
+    <content><![CDATA[<p>这是我的第一个博客！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>RL机器人控制面临的问题</title>
+    <url>/2022/05/04/RL%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8E%A7%E5%88%B6%E9%9D%A2%E4%B8%B4%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ol type="1">
+<li>RL机器人问题，是连续高维动作和状态空间</li>
+<li>RL机器人控制三个方面问题：
+<ul>
+<li>数据效率</li>
+<li>探索与利用</li>
+<li>泛化性和可复现性</li>
+</ul></li>
+<li>数据效率低
+<ul>
+<li>提高数据效率的方法之一是收集更多的数据和更有效地使用目前拥有的数据</li>
+<li>收集更多数据的方法之一是并行地运行多个机器人来收集数据</li>
+</ul></li>
+<li>探索与利用
+<ul>
+<li>真实机器人进行探索，可能会损伤机器人</li>
+<li>同策略方法中探索性取决于初始的条件和训练过程。在训练策略的过程，可能会注重于利用</li>
+</ul></li>
+<li>泛化性和可复现性
+<ul>
+<li>当前的某些算法只注重于某一种任务，而到了另一种任务的时候需要重新调节参数</li>
+<li>随机种子数影响着能否复现成功</li>
+</ul></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>RL</tag>
+        <tag>机器人控制</tag>
       </tags>
   </entry>
 </search>
