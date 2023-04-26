@@ -88,32 +88,6 @@
       </tags>
   </entry>
   <entry>
-    <title>强化学习中经典的探索策略</title>
-    <url>/2023/04/26/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1 id="经典的探索策略">经典的探索策略</h1>
-<ol type="1">
-<li><strong>Epsilon-greedy 探索策略</strong>。这种方法是最经典的，在 DQN 系列的算法经常被使用。</li>
-<li>置信区间上限UCB。每一个选择对应一个乐观的index（回报的经验均值+confidence radius），智能体会选择index最大的动作。
-<ul>
-<li>公式第一项可以看成是利用</li>
-<li>公式第二项就是探索，与该动作的被探索程度成正比</li>
-</ul></li>
-<li>Boltzmann 探索。智能体根据由温度系数调节的 Q 值从玻尔兹曼分布 (softmax)中选择动作 <span class="math inline">\(a\)</span>。表达式如下：<span class="math inline">\(\pi(a \mid s)=\frac{\exp (k Q(s, a))}{\Sigma_{a^{\prime}} \exp \left(k Q\left(s, a^{\prime}\right)\right)}\)</span></li>
-<li>当神经网络用于函数逼近时，采用以下的探索策略
-<ul>
-<li>策略熵。将熵项加入到损失函数中，鼓励策略采取多种行动；</li>
-<li>基于噪声的探索。噪声可以加到观测、动作甚至的参数空间中去。</li>
-</ul></li>
-</ol>
-]]></content>
-      <categories>
-        <category>单智能体强化学习</category>
-      </categories>
-      <tags>
-        <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何阅读英文文献</title>
     <url>/2022/05/06/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E8%8B%B1%E6%96%87%E6%96%87%E7%8C%AE/</url>
     <content><![CDATA[<h1 id="前提条件">前提条件</h1>
@@ -148,6 +122,32 @@
       <tags>
         <tag>科研经验</tag>
         <tag>阅读文献</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>强化学习中经典的探索策略</title>
+    <url>/2023/04/26/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="经典的探索策略">经典的探索策略</h1>
+<ol type="1">
+<li><p><strong>Epsilon-greedy 探索策略</strong>。这种方法是最经典的，在 DQN 系列的算法经常被使用。</p></li>
+<li><p>置信区间上限UCB。每一个选择对应一个乐观的index（回报的经验均值+confidence radius），智能体会选择index最大的动作。</p>
+<ul>
+<li>公式第一项可以看成是利用</li>
+<li>公式第二项就是探索，与该动作的被探索程度成正比</li>
+</ul></li>
+<li><p>Boltzmann 探索。智能体根据由温度系数调节的 Q 值从玻尔兹曼分布 (softmax)中选择动作 <span class="math inline">\(a\)</span>。表达式如下：<span class="math inline">\(\pi(a \mid s)=\frac{\exp (k Q(s, a))}{\Sigma_{a^{\prime}} \exp \left(k Q\left(s, a^{\prime}\right)\right)}\)</span></p></li>
+<li><p>当神经网络用于函数逼近时，采用以下的探索策略</p>
+<ul>
+<li>策略熵。将熵项加入到损失函数中，鼓励策略采取多种行动；</li>
+<li>基于噪声的探索。噪声可以加到观测、动作甚至的参数空间中去。</li>
+</ul></li>
+</ol>
+]]></content>
+      <categories>
+        <category>单智能体强化学习</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
       </tags>
   </entry>
 </search>
