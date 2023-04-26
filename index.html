@@ -130,7 +130,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,6 +175,97 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lzw0123.github.io/2023/04/26/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ZhengWei Li">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZWLi's Blog">
+      <meta itemprop="description" content="怕什么真理无穷，进一寸有一寸的欢喜！！！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ZWLi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/26/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-04-26 22:23:24 / Modified: 22:20:16" itemprop="dateCreated datePublished" datetime="2023-04-26T22:23:24+08:00">2023-04-26</time>
+    </span>
+
+  
+    <span id="/2023/04/26/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2%E7%AD%96%E7%95%A5%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="经典的探索策略">经典的探索策略</h1>
+<ol type="1">
+<li><strong>Epsilon-greedy 探索策略</strong>。这种方法是最经典的，在 DQN 系列的算法经常被使用。</li>
+<li>置信区间上限UCB。每一个选择对应一个乐观的index（回报的经验均值+confidence radius），智能体会选择index最大的动作。
+<ul>
+<li>公式第一项可以看成是利用</li>
+<li>公式第二项就是探索，与该动作的被探索程度成正比</li>
+</ul></li>
+<li>Boltzmann 探索。智能体根据由温度系数调节的 Q 值从玻尔兹曼分布 (softmax)中选择动作 <span class="math inline">\(a\)</span>。表达式如下：<span class="math inline">\(\pi(a \mid s)=\frac{\exp (k Q(s, a))}{\Sigma_{a^{\prime}} \exp \left(k Q\left(s, a^{\prime}\right)\right)}\)</span></li>
+<li>当神经网络用于函数逼近时，采用以下的探索策略
+<ul>
+<li>策略熵。将熵项加入到损失函数中，鼓励策略采取多种行动；</li>
+<li>基于噪声的探索。噪声可以加到观测、动作甚至的参数空间中去。</li>
+</ul></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -619,7 +710,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
